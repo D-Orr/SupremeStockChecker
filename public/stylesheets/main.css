@@ -1,0 +1,234 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700");
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700);
+
+
+html, body {
+  background: white;
+  font-family: 'Open Sans', 'Lato', sans-serif;
+  height: 100%;
+  padding: 1em;
+}
+
+title {
+    font-family: 'Open Sans', 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    margin: 0.75em 0;
+}
+
+b{
+    text-align: center;
+    font-family: 'Open Sans', 'Lato', sans-serif;
+    color: black;
+    font-weight: 600;
+    margin-left: 200px;
+    font-size: 36px;
+    /*margin: 0.75em 0;*/
+}
+
+/*#brand {*/
+    /*margin-right: 50px;*/
+
+/*}*/
+
+.logo {
+    margin-left: -210px;
+    /*margin-top: -10px;*/
+}
+
+.text {
+    margin-left: 50px;
+}
+
+#logo{
+    text-align: center;
+    font-family: 'Open Sans', 'Lato', sans-serif;
+    color: #FE0000;
+    font-weight: 600;
+    font-size: 36px;
+    margin: 0.75em 0;
+}
+
+.searchButton {
+    border: 1px solid #e0e0e0;
+    background: #fb887c;
+    outline: none;
+    padding: 1em;
+    border-radius: 3px;
+    font-weight: 300;
+    font-size: 0.8em;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    position: relative;
+    color: white;
+}
+
+.searchButton.full {
+    width: 100%;
+}
+
+input {
+    color: #3a3a5a;
+}
+
+li, .labels{
+    position: relative;
+    color: white;
+}
+
+
+ul{
+    position: relative;
+    color: white;
+}
+
+@use cssnext;
+
+/* helpers/align.css */
+
+.align {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* helpers/grid.css */
+
+:root {
+    --gridMaxWidth: 20rem;
+    --gridWidth: 90%;
+}
+
+h4 {
+    margin-top: -50px;
+}
+.grid {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    max-width: var(--gridMaxWidth);
+    width: var(--gridWidth);
+}
+
+/* layout/base.css */
+
+:root {
+    --htmlFontSize: 100%;
+
+    --bodyBackgroundColor: #61646d;
+    --bodyColor: #000;
+    --bodyFontFamily: 'Open Sans';
+    --bodyFontFamilyFallback: sans-serif;
+    --bodyFontSize: .875rem;
+    --bodyFontWeight: 400;
+    --bodyLineHeight: 1.5;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: var(--htmlFontSize);
+    height: 100%;
+}
+
+body {
+    /*background-color: var(--bodyBackgroundColor);*/
+    color: var(--bodyColor);
+    font-family: var(--bodyFontFamily), var(--bodyFontFamilyFallback);
+    font-size: var(--bodyFontSize);
+    font-weight: var(--bodyFontWeight);
+    line-height: var(--bodyLineHeight);
+    margin: 0;
+    min-height: 100%;
+}
+
+/* modules/form.css */
+
+
+input {
+    appearance: none;
+    border: none;
+    font: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+}
+
+input[type="search"] {
+    appearance: textfield;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    appearance: none;
+}
+
+.form__field {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form__input {
+    flex-grow: 1;
+}
+
+/* modules/search.css */
+
+:root {
+    --searchBackgroundColor: #42454e;
+    --searchBorderRadius: .125rem;
+    --searchFontSize: .75rem;
+    --searchPadding: .5rem;
+
+    --searchInputBorderRadius: .125rem;
+
+    --searchInputSearchBackgroundColor: #fff;
+    --searchInputSearchColor: #42454e;
+    --searchInputSearchPaddingHorizontal: .5rem;
+    --searchInputSearchPaddingVertical: .375rem;
+
+    --searchInputButtonBackgroundColor: #fb4c4c;
+    --searchInputButtonColor: #fff;
+    --searchInputButtonFontWeight: bold;
+    --searchInputButtonPaddingHorizontal: .625rem;
+    --searchInputButtonPaddingVertical: .375rem;
+    --searchInputButtonHoverBackgroundColor: #FE0000;
+}
+
+.search {
+    background-color: var(--searchBackgroundColor);
+    border-radius: var(--searchBorderRadius);
+    font-size: var(--searchFontSize);
+    padding: var(--searchPadding);
+}
+
+.search input[type="search"],
+.search input[type="submit"] {
+    border-radius: var(--searchInputBorderRadius);
+}
+
+.search input[type="search"] {
+    background-color: var(--searchInputSearchBackgroundColor);
+    color: var(--searchInputSearchColor);
+    padding: var(--searchInputSearchPaddingVertical) var(--searchInputSearchPaddingHorizontal);
+}
+
+.search input[type="submit"] {
+    background-color: var(--searchInputButtonBackgroundColor);
+    color: var(--searchInputButtonColor);
+    font-weight: var(--searchInputButtonFontWeight);
+    margin-left: .5rem;
+    padding: var(--searchInputButtonPaddingVertical) var(--searchInputButtonPaddingHorizontal);
+}
+
+.search input[type="submit"]:hover {
+    background-color: var(--searchInputButtonHoverBackgroundColor);
+}
+

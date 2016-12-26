@@ -1,0 +1,37 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title Supreme Stock Checker
+        link(rel='stylesheet', href='/stylesheets/main.css', type='text/css')
+    body
+        .main
+            center
+                div.logo
+                    img.shop_bag(src="/images/supreme_logo.png", height=55)
+
+                div.text(style='width: 60%;')
+                    center
+                        h4
+                            b  Stock Checker
+                        hr(style='width: 80%;')
+                    .grid
+                        form.search(action='/search', method='POST')
+                            .form__field
+                                input.form__input(type='search', name='search', placeholder='What are you looking for?')
+                                input.button(type='submit', value='Check Stock ')
+
+                    //footer
+                    //    div
+                    //        ul.icons
+                    //            li
+                    //                a.icon.circle.fa-twitter(href='https://twitter.com/youforiiia')
+                    //                    span.label Twitter
+                    //            li
+                    //                a.icon.circle.fa-envelope-o(href='mailto:mykalburris@gmail.com')
+                    //                    span.label Mail Me
+                    //            li
+                    //                a.icon.circle.fa-github(href='https://github.com/my-kal')
+                    //                    span.label Github
+

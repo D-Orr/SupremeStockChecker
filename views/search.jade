@@ -1,0 +1,60 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title Supreme Stock Checker
+        link(rel='stylesheet', href='/stylesheets/main2.css', type='text/css')
+    body
+        .main
+            center
+                br
+                div(style='width: 80%;')
+                    center
+                        h4
+                        img.shop_bag(src="/images/supreme_logo.png", height=55)
+                        b  Stock Checker
+                        hr(style='width: 80%;')
+
+                    .grid
+                        table
+                            - var total = 0
+                            thead
+                                tr
+                                    th Name
+                                    th Color
+                                    th Variant
+                                    th Pid
+                                    th Qty
+                            tbody
+                                for r in results
+                                    tr
+                                        td=r.name
+                                        td=r.color
+                                        td=r.variant
+                                        td=r.pid
+                                        td=r.qty
+                                        - total += r.qty
+                                    tr
+                                tr
+                                    td.total Total
+                                    td
+                                    td
+                                    td
+                                    td.total=total
+
+
+
+                    footer
+                        div
+                    //        ul.icons
+                    //            li
+                    //                a.icon.circle.fa-twitter(href='https://twitter.com/youforiiia')
+                    //                    span.label Twitter
+                    //            li
+                    //                a.icon.circle.fa-envelope-o(href='mailto:mykalburris@gmail.com')
+                    //                    span.label Mail Me
+                    //            li
+                    //                a.icon.circle.fa-github(href='https://github.com/my-kal')
+                    //                    span.label Github
+
